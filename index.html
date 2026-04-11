@@ -4,298 +4,829 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Harichandana | Portfolio</title>
+    <meta name="description" content="Portfolio of Gudapati Venkata HariChandana – Frontend Architect & Full Stack Developer.">
 
     <link rel="stylesheet" href="stylesheet.css">
-
-    <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- Typed.js -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+    <!-- PARTICLE CANVAS -->
+    <canvas id="particles-canvas"></canvas>
 
+    <!-- CURSOR GLOW -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header" id="header">
+        <a href="#" class="logo">HC</a>
         <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#services" style="--i:3">Skills</a>
-            <a href="#skills" style="--i:4">Services</a>
-            <a href="#contact" style="--i:5">Contact</a>
+            <a href="#home"      style="--i:1" class="active">Home</a>
+            <a href="#about"     style="--i:2">About</a>
+            <a href="#skills"    style="--i:3">Skills</a>
+            <a href="#education" style="--i:4">Education</a>
+            <a href="#services"  style="--i:5">Services</a>
+            <a href="#portfolio" style="--i:6">Projects</a>
+            <a href="#contact"   style="--i:7">Contact</a>
         </nav>
+        <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
     </header>
 
-    <!-- HOME SECTION -->
-    <section class="home">
+    <!-- ===================== HOME ===================== -->
+    <section class="home" id="home">
         <div class="home-content">
-
+            <div class="home-badge">✦ Available for Opportunities</div>
             <h3>Hello, It's Me</h3>
-            <h1>Gudapati Venkata HariChandana</h1>
-
-            <h3>And I'm a <span class="text"></span></h3>
-
+            <h1>Gudapati Venkata<br><span class="name-highlight">HariChandana</span></h1>
+            <h3>And I'm a <span class="typed-text"></span><span class="cursor-blink">|</span></h3>
             <p>
-                I am an enthusiastic Frontend Developer (in progress) with a passion for clean design 
-                and smooth user experiences. <br>
-                As a student, I'm constantly learning and building projects to strengthen my skills.
+                Passionate Software Developer with expertise in Full Stack Web, Mobile (Flutter), 
+                and Systems Engineering. I build scalable digital products — from intuitive UIs 
+                to distributed backend systems — that solve real-world problems.
             </p>
-
             <div class="home-sci">
-                <a href="#" style="--i:7"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.linkedin.com/in/harichandana53/" style="--i:8"><i class="bx bxl-linkedin"></i></a>
-                <a href="#" style="--i:9"><i class="bx bxl-whatsapp"></i></a>
-                <a href="https://github.com/gudapatichandana" style="--i:10"><i class="bx bxl-github"></i></a>
+
+                <a href="https://www.linkedin.com/in/harichandana53/" style="--i:8" target="_blank"><i class="bx bxl-linkedin"></i></a>
+
+                <a href="https://github.com/gudapatichandana" style="--i:10" target="_blank"><i class="bx bxl-github"></i></a>
             </div>
-
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-
-        <span class="home-imgHover"></span>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-        <div class="img">
-            <img src="bg4.png" alt="about image">
-        </div>
-
-        <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4>Frontend Developer (In Progress)</h4>
-
-            <p>
-                I am a passionate and dedicated student currently learning Frontend Development.
-                I enjoy creating clean, responsive, and visually appealing web pages while improving
-                my skills in HTML, CSS, JavaScript, and modern UI design.
-                My goal is to grow into a confident web developer by creating meaningful projects,
-                understanding real-world problems, and improving through consistent practice.
-            </p>
-
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services">
-        <div class="container">
-            <h1 class="sub-title">My <span>Services</span></h1>
-
-            <div class="services-list">
-                <div>
-                    <i class="bx bx-code" style="color:#00eeff"></i>
-                    <h2>Web Development</h2>
-                    <p>I build clean, responsive, and user-friendly web pages using HTML, CSS, and JavaScript. My focus is on creating smooth user experiences, modern layouts, and visually appealing designs that work perfectly across devices.</p>
-                    <a href="#" class="read">Learn more</a>
-                </div>
-
-                <div>
-                    <i class="bx bx-crop" style="color:#00eeff"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>I design intuitive and engaging user interfaces with attention to color theory, spacing,and user flow. My goal is to create designs that not only look beautiful but also make the user’s journey simple, meaningful, and enjoyable.</p>
-                    <a href="#" class="read">Learn more</a>
-                </div>
-
-                <div>
-                    <i class="bx bxl-apple" style="color:#00eeff"></i>
-                    <h2>App Design</h2>
-                    <p>I create clean and structured app layouts with a focus on usability and consistency. By understanding user behavior and applying modern design principles, I ensure the app screens are both functional and visually compelling.</p>
-                    <a href="#" class="read">Learn more</a>
-                </div>
+            <div class="home-btns">
+                <a href="#portfolio" class="btn-box btn-primary">View My Work</a>
+                <a href="#contact" class="btn-box btn-outline">Let's Connect</a>
             </div>
         </div>
+
+        <div class="home-3d-card" id="tiltCard">
+            <div class="card-inner">
+                <div class="card-orb orb1"></div>
+                <div class="card-orb orb2"></div>
+                <div class="home-img">
+                    <img src="bg4.png" alt="Harichandana">
+                </div>
+                <div class="card-ring"></div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-line"></div>
+        </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills">
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about reveal-section" id="about">
+        <div class="section-tag">WHO I AM</div>
+        <div class="about-grid">
+            <div class="about-img-wrapper">
+                <div class="about-img-3d" id="aboutCard">
+                    <img src="bg4.png" alt="about image">
+                    <div class="img-glow"></div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>About <span>Me</span></h2>
+                <h4>Software Developer <span class="status-dot">●</span> Full Stack &amp; Mobile</h4>
+                <p>
+                    Driven by a vision to bridge the gap between complex engineering and intuitive user experiences,
+                    I specialize in architecting high-performance frontend solutions. With a focus on modern
+                    UI design systems and scalable architectures, I transform intricate problems into
+                    elegant, seamless digital products. My commitment is to deliver precision-engineered
+                    web applications that align technical excellence with strategic business value.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>7+</h3>
+                        <p>Projects Built</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>12+</h3>
+                        <p>Technologies</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                </div>
+                <a href="Images/resume.pdf" download class="btn-box btn-primary"><i class="bx bx-download"></i> Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="reveal-section">
+        <div class="section-tag">EXPERTISE</div>
         <h1 class="sub-title">My <span>Skills</span></h1>
 
-        <div class="skills-wrapper">
+        <div class="skill-cards-grid">
 
-            <!-- Left Side – Technical Skills -->
-            <div class="technical-skills-box">
-                <h2 class="title">Technical Skills</h2>
-
-                <div class="skill-bar">
-                    <div class="info">
-                        <i class="bx bxl-html5" style="color:#c95d2e;"></i>
-                        <span>HTML</span>
-                    </div>
-                    <div class="progress-line html">
-                        <span></span>
-                    </div>
+            <div class="skill-card-item" style="--accent:#e34f26;">
+                <div class="ski-icon"><i class="bx bxl-html5"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">HTML5</span><span class="ski-pct">90%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:90%; --clr:#e34f26;"></div></div>
+                    <span class="ski-level expert">Expert</span>
                 </div>
-
-                <div class="skill-bar">
-                    <div class="info">
-                        <i class="bx bxl-css3" style="color:#147bbc;"></i>
-                        <span>CSS</span>
-                    </div>
-                    <div class="progress-line css">
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="info">
-                        <i class="bx bxl-javascript" style="color:#b0bc1e;"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="progress-line javascript">
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="info">
-                        <i class="bx bxl-python" style="color:#c32ec9;"></i>
-                        <span>Python</span>
-                    </div>
-                    <div class="progress-line python">
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="info">
-                        <i class="bx bxl-react" style="color:#61DBFB;"></i>
-                        <span>React</span>
-                    </div>
-                    <div class="progress-line react">
-                        <span></span>
-                    </div>
-                </div>
+                <div class="card-shimmer"></div>
             </div>
 
-            <!-- Right Side – Professional Skills -->
-            <div class="professional-skills-box">
-                <h2 class="title">Professional Skills</h2>
-
-                <div class="circular-grid">
-
-                    <div class="circular-skill">
-                        <div class="radial-bar">
-                            <svg width="160" height="160" viewBox="0 0 160 160">
-                                <circle class="progress-bar"></circle>
-                                <circle class="path" style="--percent: 90;"></circle>
-                            </svg>
-                            <div class="percentage">90%</div>
-                        </div>
-                        <div class="text">Creativity</div>
-                    </div>
-
-                    <div class="circular-skill">
-                        <div class="radial-bar">
-                            <svg width="160" height="160" viewBox="0 0 160 160">
-                                <circle class="progress-bar"></circle>
-                                <circle class="path" style="--percent: 65;"></circle>
-                            </svg>
-                            <div class="percentage">65%</div>
-                        </div>
-                        <div class="text">Communication</div>
-                    </div>
-
-                    <div class="circular-skill">
-                        <div class="radial-bar">
-                            <svg width="160" height="160" viewBox="0 0 160 160">
-                                <circle class="progress-bar"></circle>
-                                <circle class="path" style="--percent: 75;"></circle>
-                            </svg>
-                            <div class="percentage">75%</div>
-                        </div>
-                        <div class="text">Problem Solving</div>
-                    </div>
-
-                    <div class="circular-skill">
-                        <div class="radial-bar">
-                            <svg width="160" height="160" viewBox="0 0 160 160">
-                                <circle class="progress-bar"></circle>
-                                <circle class="path" style="--percent: 85;"></circle>
-                            </svg>
-                            <div class="percentage">85%</div>
-                        </div>
-                        <div class="text">Teamwork</div>
-                    </div>
-
+            <div class="skill-card-item" style="--accent:#1572b6;">
+                <div class="ski-icon"><i class="bx bxl-css3"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">CSS3</span><span class="ski-pct">80%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:80%; --clr:#1572b6;"></div></div>
+                    <span class="ski-level proficient">Proficient</span>
                 </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <div class="skill-card-item" style="--accent:#f7df1e;">
+                <div class="ski-icon" style="color:#f7df1e;"><i class="bx bxl-javascript"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">JavaScript</span><span class="ski-pct">85%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:85%; --clr:#f7df1e;"></div></div>
+                    <span class="ski-level expert">Expert</span>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <div class="skill-card-item" style="--accent:#3776ab;">
+                <div class="ski-icon"><i class="bx bxl-python"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">Python</span><span class="ski-pct">80%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:80%; --clr:#3776ab;"></div></div>
+                    <span class="ski-level familiar">Familiar</span>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <div class="skill-card-item" style="--accent:#61dafb;">
+                <div class="ski-icon"><i class="bx bxl-react"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">React</span><span class="ski-pct">80%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:80%; --clr:#61dafb;"></div></div>
+                    <span class="ski-level proficient">Proficient</span>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <div class="skill-card-item" style="--accent:#00b4ab;">
+                <div class="ski-icon"><i class="bx bxl-flutter"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">Flutter</span><span class="ski-pct">82%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:82%; --clr:#00b4ab;"></div></div>
+                    <span class="ski-level proficient">Proficient</span>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <div class="skill-card-item" style="--accent:#339933;">
+                <div class="ski-icon"><i class="bx bxl-nodejs"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">Node.js</span><span class="ski-pct">80%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:80%; --clr:#339933;"></div></div>
+                    <span class="ski-level proficient">Proficient</span>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <div class="skill-card-item" style="--accent:#007396;">
+                <div class="ski-icon"><i class="bx bxl-java"></i></div>
+                <div class="ski-info">
+                    <div class="ski-top"><span class="ski-name">Java</span><span class="ski-pct">82%</span></div>
+                    <div class="ski-track"><div class="ski-fill" style="--w:82%; --clr:#007396;"></div></div>
+                    <span class="ski-level proficient">Proficient</span>
+                </div>
+                <div class="card-shimmer"></div>
             </div>
 
         </div>
+
+        <div class="soft-skills-row">
+            <div class="soft-card">
+                <div class="conic-dial" style="--deg:324deg; --clr:#00eeff;">
+                    <div class="conic-inner"><span>90%</span></div>
+                </div>
+                <div class="soft-label">Creativity</div>
+                <div class="soft-icon"><i class="bx bx-bulb"></i></div>
+            </div>
+            <div class="soft-card">
+                <div class="conic-dial" style="--deg:295deg; --clr:#a78bfa;">
+                    <div class="conic-inner"><span>82%</span></div>
+                </div>
+                <div class="soft-label">Communication</div>
+                <div class="soft-icon"><i class="bx bx-conversation"></i></div>
+            </div>
+            <div class="soft-card">
+                <div class="conic-dial" style="--deg:316deg; --clr:#34d399;">
+                    <div class="conic-inner"><span>88%</span></div>
+                </div>
+                <div class="soft-label">Problem Solving</div>
+                <div class="soft-icon"><i class="bx bx-brain"></i></div>
+            </div>
+            <div class="soft-card">
+                <div class="conic-dial" style="--deg:306deg; --clr:#f59e0b;">
+                    <div class="conic-inner"><span>85%</span></div>
+                </div>
+                <div class="soft-label">Teamwork</div>
+                <div class="soft-icon"><i class="bx bx-group"></i></div>
+            </div>
+            <div class="soft-card">
+                <div class="conic-dial" style="--deg:288deg; --clr:#f43f5e;">
+                    <div class="conic-inner"><span>80%</span></div>
+                </div>
+                <div class="soft-label">Adaptability</div>
+                <div class="soft-icon"><i class="bx bx-refresh"></i></div>
+            </div>
+        </div>
     </section>
-    <section>
-    <div id="portfolio" id="project">
-        <div class="main-text" id="project">
-            <h2>Latest<span>Project</span></h2>
+
+    <!-- ===================== TECH STACK ===================== -->
+    <section id="techstack" class="reveal-section techstack-section">
+        <div class="section-tag">ARSENAL</div>
+        <h1 class="sub-title">Tech <span>Stack</span></h1>
+        <p class="section-subtitle">A comprehensive toolkit of languages, frameworks, databases, and tools I leverage to build impactful solutions.</p>
+
+        <!-- Category: Languages -->
+        <div class="tech-category">
+            <div class="tech-cat-label">Languages</div>
+            <div class="tech-pill-row">
+                <div class="tech-pill"><span class="tp-icon" style="background:#e34f26;"><i class="bx bxl-html5"></i></span><span>HTML5</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#1572b6;"><i class="bx bxl-css3"></i></span><span>CSS3</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#f7df1e; color:#000;"><i class="bx bxl-javascript"></i></span><span>JavaScript</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#3776ab;"><i class="bx bxl-python"></i></span><span>Python</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#007396;"><i class="bx bxl-java"></i></span><span>Java</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#00b4ab;"><i class="bx bxl-flutter"></i></span><span>Dart</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#555;"><i class="bx bx-code-alt"></i></span><span>C</span></div>
+            </div>
+        </div>
+
+        <!-- Category: Frameworks & Libraries -->
+        <div class="tech-category">
+            <div class="tech-cat-label">Frameworks &amp; Libraries</div>
+            <div class="tech-pill-row">
+                <div class="tech-pill"><span class="tp-icon" style="background:#61dafb; color:#000;"><i class="bx bxl-react"></i></span><span>React</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#00b4ab;"><i class="bx bxl-flutter"></i></span><span>Flutter</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#339933;"><i class="bx bxl-nodejs"></i></span><span>Node.js</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#000;"><i class="bx bx-server"></i></span><span>Express.js</span></div>
+            </div>
+        </div>
+
+        <!-- Category: Databases -->
+        <div class="tech-category">
+            <div class="tech-cat-label">Databases</div>
+            <div class="tech-pill-row">
+                <div class="tech-pill"><span class="tp-icon" style="background:#4479a1;"><i class="bx bx-data"></i></span><span>MySQL</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#003b57;"><i class="bx bx-data"></i></span><span>SQLite</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#ff6f00;"><i class="bx bxl-firebase"></i></span><span>Firebase</span></div>
+            </div>
+        </div>
+
+        <!-- Category: Tools & Platforms -->
+        <div class="tech-category">
+            <div class="tech-cat-label">Tools &amp; Platforms</div>
+            <div class="tech-pill-row">
+                <div class="tech-pill"><span class="tp-icon" style="background:#f05032;"><i class="bx bxl-git"></i></span><span>Git</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#181717;"><i class="bx bxl-github"></i></span><span>GitHub</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#007acc;"><i class="bx bx-code-curly"></i></span><span>VS Code</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#f37626;"><i class="bx bx-book"></i></span><span>Jupyter</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#150458;"><i class="bx bx-bar-chart-alt-2"></i></span><span>Pandas</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#013243;"><i class="bx bx-grid"></i></span><span>NumPy</span></div>
+            </div>
+        </div>
+
+        <!-- Category: Concepts -->
+        <div class="tech-category">
+            <div class="tech-cat-label">Concepts &amp; Domains</div>
+            <div class="tech-pill-row">
+                <div class="tech-pill"><span class="tp-icon" style="background:#7c3aed;"><i class="bx bx-link-alt"></i></span><span>Blockchain</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#16a34a;"><i class="bx bx-broadcast"></i></span><span>IoT</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#0284c7;"><i class="bx bx-layer"></i></span><span>Distributed Systems</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#db2777;"><i class="bx bx-stats"></i></span><span>Data Analytics</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#d97706;"><i class="bx bx-palette"></i></span><span>UI/UX Design</span></div>
+                <div class="tech-pill"><span class="tp-icon" style="background:#dc2626;"><i class="bx bx-shield"></i></span><span>Cybersecurity</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="reveal-section">
+        <div class="section-tag">ACADEMICS</div>
+        <h1 class="sub-title">My <span>Education</span></h1>
+
+        <div class="edu-resume-grid">
+
+            <!-- TIMELINE -->
+            <div class="edu-timeline">
+
+                <!-- B.Tech (current) -->
+                <div class="edu-card" data-tilt>
+                    <div class="edu-icon"><i class="bx bxs-graduation"></i></div>
+                    <div class="edu-meta-top">
+                        <span class="edu-period"><i class="bx bx-calendar"></i> 2023 – 2027</span>
+                        <span class="edu-badge pursuing">Pursuing</span>
+                    </div>
+                    <h3>B.Tech – Computer Science &amp; Engineering</h3>
+                    <p class="edu-institution"><i class="bx bx-building"></i> Amrita Vishwa Vidyapeetham University</p>
+                    <p class="edu-board"><i class="bx bx-map-pin"></i> Coimbatore, India</p>
+                    <div class="edu-scores">
+                        <div class="score-chip glow">
+                            <span class="score-label">CGPA</span>
+                            <span class="score-value score-highlight">7.15</span>
+                        </div>
+                        <div class="score-chip">
+                            <span class="score-label">Scale</span>
+                            <span class="score-value">10.0</span>
+                        </div>
+                        <div class="score-chip">
+                            <span class="score-label">Specialization</span>
+                            <span class="score-value">CSE</span>
+                        </div>
+                    </div>
+                    <div class="card-shimmer"></div>
+                </div>
+
+                <!-- Class XII -->
+                <div class="edu-card" data-tilt>
+                    <div class="edu-icon class12"><i class="bx bxs-book-open"></i></div>
+                    <div class="edu-meta-top">
+                        <span class="edu-period"><i class="bx bx-calendar"></i> Jun 2022 – May 2023</span>
+                        <span class="edu-badge passed">Passed Out 2023</span>
+                    </div>
+                    <h3>Class XII – Higher Secondary Education</h3>
+                    <p class="edu-institution"><i class="bx bx-building"></i> Govt Junior College</p>
+                    <p class="edu-board"><i class="bx bx-map-pin"></i> Enkoor, Enkoor Mandal, Khammam District</p>
+                    <div class="edu-scores">
+                        <div class="score-chip glow">
+                            <span class="score-label">CGPA</span>
+                            <span class="score-value score-highlight">9.33</span>
+                        </div>
+                        <div class="score-chip glow">
+                            <span class="score-label">Percentage</span>
+                            <span class="score-value score-highlight">93.3%</span>
+                        </div>
+                        <div class="score-chip">
+                            <span class="score-label">Board</span>
+                            <span class="score-value">TSBIE</span>
+                        </div>
+                        <div class="score-chip">
+                            <span class="score-label">Stream</span>
+                            <span class="score-value">MPC</span>
+                        </div>
+                    </div>
+                    <div class="card-shimmer"></div>
+                </div>
+
+                <!-- Class X -->
+                <div class="edu-card" data-tilt>
+                    <div class="edu-icon class10"><i class="bx bxs-school"></i></div>
+                    <div class="edu-meta-top">
+                        <span class="edu-period"><i class="bx bx-calendar"></i> Jun 2019 – Jun 2020</span>
+                        <span class="edu-badge passed">Passed Out 2020</span>
+                    </div>
+                    <h3>Class X – Secondary Education</h3>
+                    <p class="edu-institution"><i class="bx bx-building"></i> Vani Vivekananda Vidyalayam</p>
+                    <p class="edu-board"><i class="bx bx-map-pin"></i> Wyra, Wyra Mandal, Khammam District</p>
+                    <div class="edu-scores">
+                        <div class="score-chip glow">
+                            <span class="score-label">CGPA</span>
+                            <span class="score-value score-highlight">9.5</span>
+                        </div>
+                        <div class="score-chip glow">
+                            <span class="score-label">Percentage</span>
+                            <span class="score-value score-highlight">95%</span>
+                        </div>
+                        <div class="score-chip">
+                            <span class="score-label">Board</span>
+                            <span class="score-value">BSE Telangana</span>
+                        </div>
+                        <div class="score-chip">
+                            <span class="score-label">Type</span>
+                            <span class="score-value">MPC</span>
+                        </div>
+                    </div>
+                    <div class="card-shimmer"></div>
+                </div>
+
+            </div>
+
+            <!-- RESUME CARD -->
+            <div class="resume-card" data-tilt>
+                <div class="resume-glow-orb"></div>
+                <div class="resume-icon"><i class="bx bxs-file-pdf"></i></div>
+                <h3>Resume / CV</h3>
+                <p>My complete professional resume outlining technical proficiencies, academic achievements, project highlights, and career objectives — crafted for impact.</p>
+
+                <div class="resume-highlights">
+                    <div class="rh-item"><i class="bx bx-check-circle"></i> 7+ Technical Projects</div>
+                    <div class="rh-item"><i class="bx bx-check-circle"></i> 95% in Class X &amp; 93.3% in Class XII</div>
+                    <div class="rh-item"><i class="bx bx-check-circle"></i> B.Tech CSE @ Amrita Vishwa Vidyapeetham</div>
+                    <div class="rh-item"><i class="bx bx-check-circle"></i> Proficient in HTML, CSS, JS, Python</div>
+                </div>
+
+                <a href="Images/resume.pdf" download class="btn-box btn-primary resume-download-btn">
+                    <i class="bx bx-download"></i> Download Resume
+                </a>
+                <a href="Images/resume.pdf" target="_blank" class="btn-box btn-outline" style="margin-top:12px;">
+                    <i class="bx bx-show"></i> Preview Online
+                </a>
+
+                <div class="card-shimmer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section id="services" class="reveal-section">
+        <div class="section-tag">WHAT I DO</div>
+        <h1 class="sub-title">My <span>Services</span></h1>
+        <div class="services-list">
+            <div class="service-card" data-tilt>
+                <div class="service-icon-wrapper"><i class="bx bx-code-alt"></i></div>
+                <h2>Full-Stack Web Engineering</h2>
+                <p>Architecting end-to-end web applications with React, Node.js, and scalable SQL/NoSQL databases, ensuring secure and high-performance server-client communication.</p>
+                <a href="#proj-web" class="read">View Web Projects <i class="bx bx-right-arrow-alt"></i></a>
+                <div class="card-shimmer"></div>
+            </div>
+            <div class="service-card featured" data-tilt>
+                <div class="service-icon-wrapper"><i class="bx bx-mobile-alt"></i></div>
+                <div class="featured-tag">Popular</div>
+                <h2>Mobile App Development</h2>
+                <p>Building cross-platform mobile experiences with Flutter and Firebase. Delivering fluid, native-like UIs and real-time state management for dynamic applications.</p>
+                <a href="#proj-app" class="read">View App Projects <i class="bx bx-right-arrow-alt"></i></a>
+                <div class="card-shimmer"></div>
+            </div>
+            <div class="service-card" data-tilt>
+                <div class="service-icon-wrapper"><i class="bx bx-server"></i></div>
+                <h2>Backend & Systems Architecture</h2>
+                <p>Designing robust backend infrastructures, distributed file systems, and real-time data pipelines using Java and Node.js for scalability and mission-critical reliability.</p>
+                <a href="#proj-backend" class="read">View Architecture <i class="bx bx-right-arrow-alt"></i></a>
+                <div class="card-shimmer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="portfolio" class="reveal-section">
+        <div class="section-tag">MY WORK</div>
+        <div class="main-text">
+            <h2>Latest <span>Projects</span></h2>
+            <p class="section-subtitle">A curated collection of engineering solutions that showcase my technical depth and design sensibility.</p>
         </div>
 
         <div class="portfolio-content">
-            <div class="row">
-                <img src="bg9.jpg">
-                <div class="layer">
-                    <h5>UI/UX Design</h5>
-                    <p>A modern UI/UX design concept focused on clean layouts, smooth interactions, and a minimal aesthetic. This project highlights my ability to create visually appealing interfaces that enhance user experience.</p>
-                    <a href="https://github.com/gudapatichandana/Resort-System"><i class="bc bx-link-external" style="color:aliceblue;"></i></a>
+            <!-- Project 1 -->
+            <div class="project-card" data-tilt>
+                <div class="project-img">
+                    <img src="Images/fashion.png" alt="Fashion Preference Analytics">
+                    <div class="project-overlay">
+                        <a href="https://github.com/gudapatichandana/Student-Fashion-Preferences-and-Spending-Analysis" target="_blank" class="project-link-btn"><i class="bx bx-link-external"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <img src="bg10.jpg">
-                <div class="layer">
-                    <h5>App Development</h5>
-                    <p>A fully responsive design prototype built with attention to spacing, color harmony, and user flow. It demonstrates how thoughtful design can turn simple ideas into professional-looking interfaces.</p>
-                    <a href="https://github.com/gudapatichandana/mapquiz"><i class="bc bx-link-external" style="color:aliceblue;"></i></a>
+                <div class="project-body">
+                    <div class="project-number">01</div>
+                    <h3>Fashion Preference Analytics</h3>
+                    <p>Leveraged advanced statistical modeling and Python-driven analytics to decode consumer behavioral patterns and spending trends within the student demographic.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Data Analytics</span>
+                        <span>Jupyter</span>
+                    </div>
                 </div>
+                <div class="card-shimmer"></div>
             </div>
-            <div class="row">
-                <img src="bg11.jpg">
-                <div class="layer">
-                    <h5>Web Development</h5>
-                    <p>A creative interface exploration showcasing my skills in layout structure, branding, and modern design trends. This project reflects my growth and consistency in front-end design practices.</p>
-                    <a href="#"><i class="bc bx-link-external" style="color:aliceblue;"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-    <section class="contact" id="contact">
-    <div class="contact-text">
-        <h2>Contact<span>Me</span></h2>
-        <h4>Let's work Together</h4>
-        <p>I’m always open to collaborating on exciting projects or exploring new opportunities. If you have an idea, a project, or simply want to connect, feel free to reach out. Let’s work together to create something meaningful and impactful.</p>
-        
-        <div class="contact-list">
-            <li><i class='bx bxs-send'></i>gudapatichandana53@gmail.com</li>
-            <li><i class='bx bxs-phone'></i>0123456789</li>
-        </div>
 
-        <div class="contact-icons">
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="https://github.com/gudapatichandana"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.linkedin.com/in/harichandana53/"><i class='bx bxl-linkedin'></i></a>
-        </div>
-    </div>
-    
-    <div class="contact-form">
-        <form action="">
-            <input type="text" placeholder="Enter Your Name" required>
-            <input type="email" placeholder="Enter Your Email" required>
-            <input type="text" placeholder="Enter Your Subject">
-            <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
-            <input type="submit" value="submit" class="send">
-        </form>
-    </div>
-    </section>
-    <div class="last-text">
-    <p>Developed with love by Gudapati venkata HariChandana © 2025</p>
-    </div>
+            <!-- Project 2 -->
+            <div class="project-card" data-tilt>
+                <div class="project-img">
+                    <img src="Images/security.png" alt="Secure Research Infrastructure">
+                    <div class="project-overlay">
+                        <a href="https://github.com/gudapatichandana/Secure-Research-Portal-App" target="_blank" class="project-link-btn"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-number">02</div>
+                    <h3>Secure Research Infrastructure</h3>
+                    <p>Engineered a high-integrity research portal with multi-layered security protocols, end-to-end encryption, and role-based access control (RBAC).</p>
+                    <div class="tags">
+                        <span>Full Stack</span>
+                        <span>Cybersecurity</span>
+                        <span>RBAC</span>
+                    </div>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
 
-    <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+            <!-- Project 3 -->
+            <div id="proj-app" class="project-card" style="scroll-margin-top: 100px;" data-tilt>
+                <div class="project-img">
+                    <img src="Images/mapquiz.png" alt="Geospatial Intelligence App">
+                    <div class="project-overlay">
+                        <a href="https://github.com/gudapatichandana/mapquiz" target="_blank" class="project-link-btn"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-number">03</div>
+                    <h3>Geospatial Intelligence App</h3>
+                    <p>Architected a cross-platform geospatial quiz engine using Flutter's high-performance framework, integrating real-time API state management.</p>
+                    <div class="tags">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Geospatial</span>
+                    </div>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <!-- Project 4 -->
+            <div id="proj-backend" class="project-card" style="scroll-margin-top: 100px;" data-tilt>
+                <div class="project-img">
+                    <img src="Images/mini_gfs.png" alt="Distributed File System">
+                    <div class="project-overlay">
+                        <a href="https://github.com/gudapatichandana/Mini-Google-File-System-" target="_blank" class="project-link-btn"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-number">04</div>
+                    <h3>Distributed File System (miniGFS)</h3>
+                    <p>Developed a high-availability distributed storage architecture optimized for fault tolerance and massive throughput, implementing master-chunkserver protocols.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Distributed Systems</span>
+                        <span>Storage</span>
+                    </div>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <!-- Project 5 -->
+            <div id="proj-web" class="project-card" style="scroll-margin-top: 100px;" data-tilt>
+                <div class="project-img">
+                    <img src="Images/resort.png" alt="Enterprise Resort Ecosystem">
+                    <div class="project-overlay">
+                        <a href="https://github.com/gudapatichandana/Resort-System" target="_blank" class="project-link-btn"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-number">05</div>
+                    <h3>Enterprise Resort Ecosystem</h3>
+                    <p>Delivered a scalable hospitality management platform integrating real-time reservation logic and dynamic resource allocation via a centralized admin dashboard.</p>
+                    <div class="tags">
+                        <span>Node.js</span>
+                        <span>SQL</span>
+                        <span>Real-time</span>
+                    </div>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card" data-tilt>
+                <div class="project-img">
+                    <img src="Images/voting.png" alt="Blockchain Governance Platform">
+                    <div class="project-overlay">
+                        <a href="https://github.com/gudapatichandana/Secure-Transparent-Electronic-Voting-System-using-Blockchain-Technology-" target="_blank" class="project-link-btn"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-number">06</div>
+                    <h3>Blockchain Governance Platform</h3>
+                    <p>Pioneered a decentralized governance framework using immutable ledgers and cryptographic verification to ensure audit-ready transparency.</p>
+                    <div class="tags">
+                        <span>Blockchain</span>
+                        <span>Cryptography</span>
+                        <span>Solidity</span>
+                    </div>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project-card" data-tilt>
+                <div class="project-img">
+                    <img src="Images/irrigation.png" alt="IoT Edge Precision Network">
+                    <div class="project-overlay">
+                        <a href="https://github.com/gudapatichandana/Smart-Irrigation-System" target="_blank" class="project-link-btn"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-number">07</div>
+                    <h3>IoT Edge Precision Network</h3>
+                    <p>Engineered an intelligent IoT edge-computing network utilizing low-latency sensor telemetry and automated feedback loops to optimize resource conservation.</p>
+                    <div class="tags">
+                        <span>IoT</span>
+                        <span>Edge Computing</span>
+                        <span>Sensors</span>
+                    </div>
+                </div>
+                <div class="card-shimmer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact reveal-section" id="contact">
+        <div class="section-tag">GET IN TOUCH</div>
+        <div class="contact-inner">
+            <div class="contact-text">
+                <h2>Contact<span> Me</span></h2>
+                <h4>Let's Build Something Great Together</h4>
+                <p>I'm always open to collaborating on exciting projects or exploring new opportunities. If you have an idea, a project, or simply want to connect, feel free to reach out.</p>
+
+                <div class="contact-list">
+                    <li><div class="icon-box"><i class='bx bxs-send'></i></div> gudapatichandana53@gmail.com</li>
+                    <li><div class="icon-box"><i class='bx bx-map-pin'></i></div> Coimbatore, Tamil Nadu</li>
+                </div>
+                <div class="contact-icons">
+                    <a href="https://github.com/gudapatichandana" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/harichandana53/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="form-card">
+                    <form action="https://formsubmit.co/gudapatichandana53@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New message from Portfolio!">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" id="c-name" placeholder=" " required>
+                            <label for="c-name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="c-email" placeholder=" " required>
+                            <label for="c-email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" id="c-subject" placeholder=" ">
+                            <label for="c-subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="c-msg" rows="5" placeholder=" " required></textarea>
+                            <label for="c-msg">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn-box btn-primary glow-btn">Send Message <i class="bx bx-send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">HC</div>
+            <p>&copy; 2025 Gudapati Venkata HariChandana. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="top"><i class='bx bx-chevron-up'></i></a>
 
     <script src="main.js"></script>
+    <script>
+    /* ---- Typed.js ---- */
+    new Typed('.typed-text', {
+        strings: ['Software Developer', 'Full Stack Developer', 'Mobile App Developer', 'Systems Engineer', 'Problem Solver'],
+        typeSpeed: 60, backSpeed: 40, loop: true, backDelay: 1500
+    });
 
+    /* ---- Particle Canvas ---- */
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+        particles.push({
+            x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 2 + 0.5, a: Math.random() * 0.5 + 0.1
+        });
+    }
+    function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+            ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0, 238, 255, ${p.a})`; ctx.fill();
+        });
+        particles.forEach((p, i) => {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = p.x - particles[j].x, dy = p.y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y); ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(0, 238, 255, ${0.12 * (1 - dist / 120)})`;
+                    ctx.lineWidth = 0.5; ctx.stroke();
+                }
+            }
+        });
+        requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    /* ---- Cursor Glow ---- */
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+    });
+
+    /* ---- Header scroll ---- */
+    window.addEventListener('scroll', () => {
+        document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    /* ---- 3D Tilt on Hero card ---- */
+    const tiltCard = document.getElementById('tiltCard');
+    if (tiltCard) {
+        tiltCard.addEventListener('mousemove', e => {
+            const rect = tiltCard.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width - 0.5) * 30;
+            const y = ((e.clientY - rect.top) / rect.height - 0.5) * -30;
+            tiltCard.style.transform = `perspective(800px) rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+        tiltCard.addEventListener('mouseleave', () => {
+            tiltCard.style.transform = 'perspective(800px) rotateY(0) rotateX(0)';
+        });
+    }
+
+    /* ---- 3D Tilt on About card ---- */
+    const aboutCard = document.getElementById('aboutCard');
+    if (aboutCard) {
+        aboutCard.addEventListener('mousemove', e => {
+            const rect = aboutCard.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
+            const y = ((e.clientY - rect.top) / rect.height - 0.5) * -20;
+            aboutCard.style.transform = `perspective(600px) rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+        aboutCard.addEventListener('mouseleave', () => {
+            aboutCard.style.transform = 'perspective(600px) rotateY(0) rotateX(0)';
+        });
+    }
+
+    /* ---- 3D Tilt on all [data-tilt] ---- */
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width - 0.5) * 18;
+            const y = ((e.clientY - rect.top) / rect.height - 0.5) * -18;
+            card.style.transform = `perspective(700px) rotateY(${x}deg) rotateX(${y}deg) translateZ(10px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(700px) rotateY(0) rotateX(0) translateZ(0)';
+        });
+    });
+
+    /* ---- Shimmer effect on mouse ---- */
+    document.querySelectorAll('.card-shimmer').forEach(shimmer => {
+        const parent = shimmer.parentElement;
+        parent.addEventListener('mousemove', e => {
+            const rect = parent.getBoundingClientRect();
+            const x = e.clientX - rect.left, y = e.clientY - rect.top;
+            shimmer.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.06) 0%, transparent 60%)`;
+        });
+        parent.addEventListener('mouseleave', () => { shimmer.style.background = ''; });
+    });
+
+    /* ---- Scroll reveal ---- */
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-section, .project-card, .service-card, .stat-card, .skill-bar, .circular-skill, .skill-card-item, .soft-card').forEach(el => observer.observe(el));
+
+    /* ---- Service Card Clicks ---- */
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            const link = card.querySelector('a.read');
+            if (link) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    /* ---- Mobile menu ---- */
+    document.getElementById('menuToggle').addEventListener('click', () => {
+        document.querySelector('.navbar').classList.toggle('open');
+    });
+    </script>
 </body>
 </html>
